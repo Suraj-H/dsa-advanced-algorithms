@@ -8,19 +8,6 @@
  * Explanation: The subarray [3, 3] has two elements that are equal.
  */
 
-// brute force: time: O(n * k)
-function bruteForce(arr, k) {
-  for (let L = 0; L < arr.length; L++) {
-    for (let R = L + 1; R < Math.min(arr.length, L + k); R++) {
-      if (arr[L] === arr[R]) return true;
-    }
-  }
-
-  return false;
-}
-
-console.log("Brute Force: ", bruteForce([1, 2, 3, 2, 3, 3], 2)); // true
-
 // sliding window fixed size: time: O(n)
 function slidingWindowFixed(arr, k) {
   const window = new Set();
