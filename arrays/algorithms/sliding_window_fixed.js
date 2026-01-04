@@ -9,11 +9,11 @@
  */
 
 // sliding window fixed size: time: O(n)
-function slidingWindowFixed(arr, k) {
+function slidingWindowFixedSize(arr, k) {
   const window = new Set();
   let L = 0;
 
-  for (let R in arr) {
+  for (let R = 0; R < arr.length; R++) {
     if (R - L + 1 > k) {
       window.delete(arr[L]);
       L++;
@@ -28,6 +28,6 @@ function slidingWindowFixed(arr, k) {
 }
 
 console.log(
-  "Sliding Window Fixed: ",
-  slidingWindowFixed([1, 2, 3, 2, 3, 3], 2)
+  "Sliding Window Fixed Size: ",
+  slidingWindowFixedSize([1, 2, 3, 2, 3, 3], 2)
 ); // true

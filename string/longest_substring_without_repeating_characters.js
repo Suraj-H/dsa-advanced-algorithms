@@ -16,7 +16,8 @@
  *
  * Time: O(n)
  * Space: O(m)
- * where n is the length of the string and m is the number of unique characters in the string
+ * where n is the length of the string
+ * and m is the number of unique characters in the string
  */
 
 // longest substring without repeating characters: time: O(n)

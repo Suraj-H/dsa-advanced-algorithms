@@ -14,7 +14,7 @@ function longestSubarrayWithSameValue(arr) {
   let maxLength = 0;
   let L = 0;
 
-  for (let R in arr) {
+  for (let R = 0; R < arr.length; R++) {
     if (arr[L] !== arr[R]) L = R;
 
     maxLength = Math.max(maxLength, R - L + 1);
@@ -25,7 +25,7 @@ function longestSubarrayWithSameValue(arr) {
 
 console.log(
   "Longest Subarray With Same Value: ",
-  longestSubarrayWithSameValue([7, 2, 2, 3, 3, 3, 2, 5]),
+  longestSubarrayWithSameValue([7, 2, 2, 3, 3, 3, 2, 5])
 ); // 3
 
 /**
@@ -43,7 +43,7 @@ function shortestSubarrayWithSumGreaterThanOrEqualToTarget(arr, target) {
   let L = 0;
   let total = 0;
 
-  for (let R in arr) {
+  for (let R = 0; R < arr.length; R++) {
     total += arr[R];
 
     while (total >= target) {
@@ -58,5 +58,5 @@ function shortestSubarrayWithSumGreaterThanOrEqualToTarget(arr, target) {
 
 console.log(
   "Shortest Subarray With Sum Greater Than Or Equal To Target: ",
-  shortestSubarrayWithSumGreaterThanOrEqualToTarget([2, 3, 1, 2, 4, 3], 7),
+  shortestSubarrayWithSumGreaterThanOrEqualToTarget([2, 3, 1, 2, 4, 3], 7)
 ); // 2
