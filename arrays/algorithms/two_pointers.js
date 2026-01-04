@@ -15,8 +15,8 @@ class IsPalindrome {
   }
 
   isPalindrome() {
-    let L = 0,
-      R = this.word.length - 1;
+    let L = 0;
+    let R = this.word.length - 1;
 
     while (L < R) {
       while (L < R && !this.isAlphanumeric(this.word[L])) L++;
@@ -50,8 +50,8 @@ console.log("Is Palindrome: ", isPalindrome.isPalindrome()); // true
 
 // two pointers: time: O(n)
 function twoSum(arr, target) {
-  let L = 0,
-    R = arr.length - 1;
+  let L = 0;
+  let R = arr.length - 1;
 
   while (L < R) {
     if (arr[L] + arr[R] < target) L++;
