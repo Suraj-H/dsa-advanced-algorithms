@@ -51,11 +51,24 @@ function isValidParenthesisStringGreedyAlgorithm(s) {
   return leftMin === 0;
 }
 
-console.log(isValidParenthesisStringGreedyAlgorithm("(*)")); // true
-console.log(isValidParenthesisStringGreedyAlgorithm("(*))")); // true
-console.log(isValidParenthesisStringGreedyAlgorithm("((**)")); // true
-console.log(isValidParenthesisStringGreedyAlgorithm("(((*)")); // false
 console.log(
+  "Valid Parenthesis String: ",
+  isValidParenthesisStringGreedyAlgorithm("(*)")
+); // true
+console.log(
+  "Valid Parenthesis String: ",
+  isValidParenthesisStringGreedyAlgorithm("(*))")
+); // true
+console.log(
+  "Valid Parenthesis String: ",
+  isValidParenthesisStringGreedyAlgorithm("((**)")
+); // true
+console.log(
+  "Valid Parenthesis String: ",
+  isValidParenthesisStringGreedyAlgorithm("(((*)")
+); // false
+console.log(
+  "Valid Parenthesis String: ",
   isValidParenthesisStringGreedyAlgorithm(
     "(((((()*)(*)*))())())(()())())))((**)))))(()())()"
   )
