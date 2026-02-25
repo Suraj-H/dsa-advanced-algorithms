@@ -1,6 +1,10 @@
+// Maximum Sum of Subarrays of Size K
+
 nums = [2, 1, 5, 1, 3, 2];
 k = 3;
 
+// Time → O(n)
+// Space → O(1)
 function maximumSubarraySum(nums, k) {
   let maxSum = -Infinity;
   let start = 0;
